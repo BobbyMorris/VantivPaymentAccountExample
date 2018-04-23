@@ -67,6 +67,8 @@ namespace VantivPaymentAccountExample
         [TestCase]
         public void MakePaymentAccountAndLookItUp()
         {
+            Assert.That(_accountToken, Is.Not.Empty, "Please fill in the account token in the setup");
+
             var ptAcctNo = 1234;
 
             var address = new Address
